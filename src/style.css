@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-950 text-slate-100 antialiased;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-slate-900/70 border border-slate-700/60 shadow-2xl backdrop-blur-xl;
+  }
+
+  .stat-label {
+    @apply text-xs font-medium uppercase tracking-wide text-slate-400;
+  }
+
+  .stat-value {
+    @apply text-xl font-semibold tabular-nums text-slate-50;
+  }
+}
+
