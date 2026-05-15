@@ -84,7 +84,7 @@ export const App: React.FC = () => {
     if (!audioCtxRef.current) {
       const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
       const masterGain = ctx.createGain();
-      masterGain.gain.value = 0.7;
+      masterGain.gain.value = 1.0;
       masterGain.connect(ctx.destination);
       audioCtxRef.current = ctx;
       masterGainRef.current = masterGain;
