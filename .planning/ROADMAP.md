@@ -59,6 +59,13 @@ Plans:
 - [ ] 03-01-PLAN.md — Install admob + @capacitor/app packages, add AdMob meta-data to AndroidManifest.xml + strings.xml, add body background to index.html (ADM-01, ADM-02)
 - [ ] 03-02-PLAN.md — Create useBannerHeight hook (bannerAdSizeChanged listener), rewrite main.tsx with IIFE consent+init sequence (ADM-03, ADM-04, ADM-07, ADM-08)
 - [ ] 03-03-PLAN.md — Wire banner into App.tsx (showBanner, appStateChange, spacer div), build + physical device verification (ADM-05, ADM-06, ADM-07, ADM-08)
+
+**Wave 2** *(blocked on Wave 1 completion)*
+**Wave 3** *(blocked on Wave 2 completion)*
+
+Cross-cutting constraints:
+- All AdMob calls behind `Capacitor.isNativePlatform()` guard (D-05, applies across all plans)
+- Use `bannerAdSizeChanged` for height — NOT `bannerAdLoaded` (no payload; RESEARCH.md critical finding)
 **UI hint:** yes
 
 ### Phase 4: Signing + Play Store Submission
@@ -82,5 +89,5 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Web Fixes | 2/2 | Complete | 2026-05-15 |
 | 2. Capacitor Android Baseline | 2/2 | Complete | 2026-05-15 |
-| 3. AdMob Integration | 0/3 | Not started | - |
+| 3. AdMob Integration | 0/3 | Planned | - |
 | 4. Signing + Play Store Submission | 0/? | Not started | - |
