@@ -77,6 +77,6 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Web Fixes | 2/2 | Complete | 2026-05-15 |
-| 2. Capacitor Android Baseline | 0/2 | Not started | - |
+| 2. Capacitor Android Baseline | 0/2 | Planned | - |
 | 3. AdMob Integration | 0/? | Not started | - |
 | 4. Signing + Play Store Submission | 0/? | Not started | - |
