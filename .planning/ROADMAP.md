@@ -25,7 +25,7 @@
 4. The viewport does not zoom or shift when tapping pads on a mobile device
 **Plans:** 2 plans
 Plans:
-- [ ] 01-01-PLAN.md — Unblock build: add "jsx": "react-jsx" to tsconfig.json, delete dead Vite scaffold files
+- [x] 01-01-PLAN.md — Unblock build: add "jsx": "react-jsx" to tsconfig.json, delete dead Vite scaffold files
 - [ ] 01-02-PLAN.md — Apply all five bug fixes: pad glow (UI-01/UI-02), audio await (AUDIO-01), touch-action (TOUCH-01), viewport tag (VIEWPORT-01)
 **UI hint:** yes
 
@@ -73,7 +73,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Web Fixes | 0/2 | Ready to execute | - |
+| 1. Web Fixes | 1/2 | In progress | - |
 | 2. Capacitor Android Baseline | 0/? | Not started | - |
 | 3. AdMob Integration | 0/? | Not started | - |
 | 4. Signing + Play Store Submission | 0/? | Not started | - |

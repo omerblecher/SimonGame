@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Android Release
-status: Ready to execute
-last_updated: "2026-05-15T10:30:00.000Z"
+status: executing
+last_updated: "2026-05-15T09:37:30.679Z"
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 2
-  completed_plans: 0
+  completed_plans: 1
   percent: 0
 ---
 
@@ -25,11 +25,11 @@ progress:
 
 **Milestone:** 1 — v1.0 Android Release
 **Phase:** 1 — Web Fixes
-**Plan:** Ready to execute (2 plans, 2 waves)
-**Status:** Ready to execute
+**Plan:** Executing — Plan 01-01 complete, Plan 01-02 next (2 plans, 2 waves)
+**Status:** In progress
 
 ```
-Progress: [----] 0% — Phase 1 of 4 (planned, not yet executed)
+Progress: [=--->] 12% — Phase 1 of 4 (1/2 plans complete in Phase 1)
 ```
 
 ---
@@ -54,6 +54,8 @@ Progress: [----] 0% — Phase 1 of 4 (planned, not yet executed)
 | Capacitor over React Native | Preserves existing React codebase, no rewrite needed | Pre-planning |
 | Banner ads only | Least intrusive to gameplay; interstitials break immersion | Pre-planning |
 | Active pad stays bright, others stay normal | User's explicit preference — no dimming of inactive pads | Pre-planning |
+| tsconfig uses "jsx": "react-jsx" | Required for React 19 automatic JSX transform via Vite; fixes TS17004 errors | Phase 1 Plan 01 |
+| Deleted main.ts + counter.ts atomically | main.ts imports counter.ts — deleting only one would leave a broken import; both deleted together | Phase 1 Plan 01 |
 
 ### Active TODOs
 
@@ -80,8 +82,8 @@ None at start.
 ## Session Continuity
 
 **Last updated:** 2026-05-15
-**Last action:** Phase 1 planned — 2 plans created (01-01-PLAN.md, 01-02-PLAN.md)
-**Next action:** Execute Phase 1 — run `/gsd:execute-phase 1`
+**Last action:** Phase 1 Plan 01 executed — tsconfig JSX fix + dead scaffold files deleted; npm run build passes (commit b2148e4)
+**Next action:** Execute Phase 1 Plan 02 — apply pad glow fix, audio await fix, touch-action, viewport tag
 
 ---
 
@@ -89,7 +91,7 @@ None at start.
 
 | Phase | Status | Completed |
 |-------|--------|-----------|
-| 1. Web Fixes | Ready to execute | - |
+| 1. Web Fixes | In progress (1/2 plans complete) | - |
 | 2. Capacitor Android Baseline | Not started | - |
 | 3. AdMob Integration | Not started | - |
 | 4. Signing + Play Store Submission | Not started | - |
