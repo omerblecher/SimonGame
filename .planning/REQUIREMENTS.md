@@ -9,11 +9,11 @@
 
 ### Phase 1 — Web Fixes
 
-- [ ] **UI-01**: Active pad shows full brightness + glow during sequence playback (`brightness-125`, glow shadow visible). `opacity-40` is only applied to *inactive* pads.
-- [ ] **UI-02**: Active pad does not receive the HTML `disabled` attribute during sequence playback (prevents UA stylesheet dimming).
-- [ ] **AUDIO-01**: `AudioContext.resume()` is awaited in all gesture handlers before any tone is played. `AudioContext` is lazy-created on first user gesture, not at component mount.
-- [ ] **TOUCH-01**: All pad buttons have `touch-action: manipulation` to eliminate 300ms tap delay on Android.
-- [ ] **VIEWPORT-01**: `<meta name="viewport">` includes `user-scalable=no` and `viewport-fit=cover`.
+- [x] **UI-01**: Active pad shows full brightness + glow during sequence playback (`brightness-125`, glow shadow visible). `opacity-40` is only applied to *inactive* pads.
+- [x] **UI-02**: Active pad does not receive the HTML `disabled` attribute during sequence playback (prevents UA stylesheet dimming).
+- [x] **AUDIO-01**: `AudioContext.resume()` is awaited in all gesture handlers before any tone is played. `AudioContext` is lazy-created on first user gesture, not at component mount.
+- [x] **TOUCH-01**: All pad buttons have `touch-action: manipulation` to eliminate 300ms tap delay on Android.
+- [x] **VIEWPORT-01**: `<meta name="viewport">` includes `user-scalable=no` and `viewport-fit=cover`.
 
 ### Phase 2 — Capacitor Android Baseline
 

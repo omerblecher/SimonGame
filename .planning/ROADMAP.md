@@ -4,7 +4,7 @@
 
 ### Phases
 
-- [ ] **Phase 1: Web Fixes** - Fix active pad glow bug and AudioContext suspend issue in browser before touching native tooling
+- [x] **Phase 1: Web Fixes** - Fix active pad glow bug and AudioContext suspend issue in browser before touching native tooling
 - [ ] **Phase 2: Capacitor Android Baseline** - Package the game as a working Android app via Capacitor, fully playable on emulator or device
 - [ ] **Phase 3: AdMob Integration** - Add Google AdMob banner ad with GDPR consent flow at the bottom of the screen
 - [ ] **Phase 4: Signing + Play Store Submission** - Build a signed release AAB and submit to Google Play Store
@@ -26,7 +26,7 @@
 **Plans:** 2 plans
 Plans:
 - [x] 01-01-PLAN.md — Unblock build: add "jsx": "react-jsx" to tsconfig.json, delete dead Vite scaffold files
-- [ ] 01-02-PLAN.md — Apply all five bug fixes: pad glow (UI-01/UI-02), audio await (AUDIO-01), touch-action (TOUCH-01), viewport tag (VIEWPORT-01)
+- [x] 01-02-PLAN.md — Apply all five bug fixes: pad glow (UI-01/UI-02), audio await (AUDIO-01), touch-action (TOUCH-01), viewport tag (VIEWPORT-01)
 **UI hint:** yes
 
 ### Phase 2: Capacitor Android Baseline
@@ -73,7 +73,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Web Fixes | 1/2 | In progress | - |
+| 1. Web Fixes | 2/2 | Complete | 2026-05-15 |
 | 2. Capacitor Android Baseline | 0/? | Not started | - |
 | 3. AdMob Integration | 0/? | Not started | - |
 | 4. Signing + Play Store Submission | 0/? | Not started | - |

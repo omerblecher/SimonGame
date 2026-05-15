@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Android Release
 status: executing
-last_updated: "2026-05-15T09:37:30.679Z"
+last_updated: "2026-05-15T09:42:09.715Z"
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 2
-  completed_plans: 1
-  percent: 0
+  completed_plans: 2
+  percent: 25
 ---
 
 # State — Simon Game Android Release
@@ -24,12 +24,12 @@ progress:
 ## Current Position
 
 **Milestone:** 1 — v1.0 Android Release
-**Phase:** 1 — Web Fixes
-**Plan:** Executing — Plan 01-01 complete, Plan 01-02 next (2 plans, 2 waves)
-**Status:** In progress
+**Phase:** 1 — Web Fixes — COMPLETE
+**Plan:** All 2 plans complete — Phase 1 done
+**Status:** Phase 1 complete; Phase 2 ready to start
 
 ```
-Progress: [=--->] 12% — Phase 1 of 4 (1/2 plans complete in Phase 1)
+Progress: [==>--] 25% — Phase 1 of 4 complete (2/2 plans done)
 ```
 
 ---
@@ -39,9 +39,9 @@ Progress: [=--->] 12% — Phase 1 of 4 (1/2 plans complete in Phase 1)
 | Metric | Value |
 |--------|-------|
 | Phases total | 4 |
-| Phases complete | 0 |
+| Phases complete | 1 |
 | Requirements total | 24 |
-| Requirements complete | 0 |
+| Requirements complete | 5 |
 
 ---
 
@@ -56,6 +56,7 @@ Progress: [=--->] 12% — Phase 1 of 4 (1/2 plans complete in Phase 1)
 | Active pad stays bright, others stay normal | User's explicit preference — no dimming of inactive pads | Pre-planning |
 | tsconfig uses "jsx": "react-jsx" | Required for React 19 automatic JSX transform via Vite; fixes TS17004 errors | Phase 1 Plan 01 |
 | Deleted main.ts + counter.ts atomically | main.ts imports counter.ts — deleting only one would leave a broken import; both deleted together | Phase 1 Plan 01 |
+| Active pad excluded from disabled+opacity — gesture handlers own AudioContext lifecycle | Pad stays interactive during sequence so glow renders; resume() moved to handleStart/handlePadClick with await+try/catch | Phase 1 Plan 02 |
 
 ### Active TODOs
 
@@ -82,8 +83,8 @@ None at start.
 ## Session Continuity
 
 **Last updated:** 2026-05-15
-**Last action:** Phase 1 Plan 01 executed — tsconfig JSX fix + dead scaffold files deleted; npm run build passes (commit b2148e4)
-**Next action:** Execute Phase 1 Plan 02 — apply pad glow fix, audio await fix, touch-action, viewport tag
+**Last action:** Phase 1 Plan 02 executed — pad glow fix, audio await fix, touch-action, viewport tag (commits cd64fdd, 3b6ce2f, e747bff)
+**Next action:** Start Phase 2 — Capacitor Android Baseline (pre-check: npm show @capacitor-community/admob peerDependencies; verify java 17+)
 
 ---
 
@@ -91,7 +92,7 @@ None at start.
 
 | Phase | Status | Completed |
 |-------|--------|-----------|
-| 1. Web Fixes | In progress (1/2 plans complete) | - |
+| 1. Web Fixes | Complete | 2026-05-15 |
 | 2. Capacitor Android Baseline | Not started | - |
 | 3. AdMob Integration | Not started | - |
 | 4. Signing + Play Store Submission | Not started | - |
