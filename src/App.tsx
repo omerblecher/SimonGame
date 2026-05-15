@@ -84,7 +84,7 @@ export const App: React.FC = () => {
     if (!audioCtxRef.current) {
       const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
       const masterGain = ctx.createGain();
-      masterGain.gain.value = 0.2;
+      masterGain.gain.value = 0.7;
       masterGain.connect(ctx.destination);
       audioCtxRef.current = ctx;
       masterGainRef.current = masterGain;
@@ -292,6 +292,7 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     if (!Capacitor.isNativePlatform()) return;
+    if (!(window as { __admobReady?: boolean }).__admobReady) return;
 
     const TEST_BANNER_ID = 'ca-app-pub-3940256099942544/6300978111';
     const bannerOptions: BannerAdOptions = {

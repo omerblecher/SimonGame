@@ -24,9 +24,11 @@ const root = ReactDOM.createRoot(rootEl);
   if (Capacitor.isNativePlatform()) {
     try {
       await initializeAdMob();
+      (window as { __admobReady?: boolean }).__admobReady = true;
     } catch (err) {
       // Graceful degradation: always render the game
-      console.warn('AdMob initialization failed, rendering without ads:', err);
+      const msg = err instanceof Error ? err.message : JSON.stringify(err);
+      console.warn('AdMob initialization failed, rendering without ads:', msg);
     }
   }
   root.render(
