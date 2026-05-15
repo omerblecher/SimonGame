@@ -1,4 +1,9 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Capacitor } from '@capacitor/core';
+import { AdMob, BannerAdSize, BannerAdPosition } from '@capacitor-community/admob';
+import type { BannerAdOptions } from '@capacitor-community/admob';
+import { App as CapacitorApp } from '@capacitor/app';
+import { useBannerHeight } from './hooks/useBannerHeight';
 
 type ColorId = 'green' | 'red' | 'yellow' | 'blue';
 
@@ -283,6 +288,39 @@ export const App: React.FC = () => {
 
   const isDisabled = useMemo(() => !isUserTurn || isPlayingSequence, [isUserTurn, isPlayingSequence]);
 
+  const bannerHeight = useBannerHeight();
+
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return;
+
+    const TEST_BANNER_ID = 'ca-app-pub-3940256099942544/6300978111';
+    const bannerOptions: BannerAdOptions = {
+      adId: TEST_BANNER_ID,
+      adSize: BannerAdSize.BANNER,
+      position: BannerAdPosition.BOTTOM_CENTER,
+      margin: 0,
+      isTesting: true,
+    };
+
+    AdMob.showBanner(bannerOptions).catch(console.error);
+
+    let appStateHandle: { remove: () => Promise<void> } | null = null;
+    CapacitorApp.addListener('appStateChange', ({ isActive }) => {
+      if (isActive) {
+        AdMob.resumeBanner().catch(console.error);
+      } else {
+        AdMob.hideBanner().catch(console.error);
+      }
+    }).then((h) => {
+      appStateHandle = h;
+    });
+
+    return () => {
+      AdMob.removeBanner().catch(console.error);
+      appStateHandle?.remove();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-50 flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-4xl">
@@ -459,6 +497,7 @@ export const App: React.FC = () => {
           </div>
         </div>
       </div>
+      <div style={{ height: `${bannerHeight}px` }} aria-hidden="true" />
     </div>
   );
 };
