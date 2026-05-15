@@ -78,11 +78,39 @@
 
 ## Traceability
 
-| REQ-ID | Phase | Roadmap Phase |
-|--------|-------|---------------|
-| UI-01, UI-02 | UI Fix | Phase 1 |
-| AUDIO-01 | Audio Fix | Phase 1 |
-| TOUCH-01, VIEWPORT-01 | Android Polish | Phase 1 |
-| CAP-01 to CAP-06 | Capacitor Baseline | Phase 2 |
-| ADM-01 to ADM-08 | AdMob Integration | Phase 3 |
-| META-01 to META-04, SIGN-01 to SIGN-05, STORE-01 to STORE-06 | Play Store Submission | Phase 4 |
+| REQ-ID | Phase | Status |
+|--------|-------|--------|
+| UI-01 | Phase 1 — Web Fixes | Pending |
+| UI-02 | Phase 1 — Web Fixes | Pending |
+| AUDIO-01 | Phase 1 — Web Fixes | Pending |
+| TOUCH-01 | Phase 1 — Web Fixes | Pending |
+| VIEWPORT-01 | Phase 1 — Web Fixes | Pending |
+| CAP-01 | Phase 2 — Capacitor Android Baseline | Pending |
+| CAP-02 | Phase 2 — Capacitor Android Baseline | Pending |
+| CAP-03 | Phase 2 — Capacitor Android Baseline | Pending |
+| CAP-04 | Phase 2 — Capacitor Android Baseline | Pending |
+| CAP-05 | Phase 2 — Capacitor Android Baseline | Pending |
+| CAP-06 | Phase 2 — Capacitor Android Baseline | Pending |
+| ADM-01 | Phase 3 — AdMob Integration | Pending |
+| ADM-02 | Phase 3 — AdMob Integration | Pending |
+| ADM-03 | Phase 3 — AdMob Integration | Pending |
+| ADM-04 | Phase 3 — AdMob Integration | Pending |
+| ADM-05 | Phase 3 — AdMob Integration | Pending |
+| ADM-06 | Phase 3 — AdMob Integration | Pending |
+| ADM-07 | Phase 3 — AdMob Integration | Pending |
+| ADM-08 | Phase 3 — AdMob Integration | Pending |
+| META-01 | Phase 4 — Signing + Play Store Submission | Pending |
+| META-02 | Phase 4 — Signing + Play Store Submission | Pending |
+| META-03 | Phase 4 — Signing + Play Store Submission | Pending |
+| META-04 | Phase 4 — Signing + Play Store Submission | Pending |
+| SIGN-01 | Phase 4 — Signing + Play Store Submission | Pending |
+| SIGN-02 | Phase 4 — Signing + Play Store Submission | Pending |
+| SIGN-03 | Phase 4 — Signing + Play Store Submission | Pending |
+| SIGN-04 | Phase 4 — Signing + Play Store Submission | Pending |
+| SIGN-05 | Phase 4 — Signing + Play Store Submission | Pending |
+| STORE-01 | Phase 4 — Signing + Play Store Submission | Pending |
+| STORE-02 | Phase 4 — Signing + Play Store Submission | Pending |
+| STORE-03 | Phase 4 — Signing + Play Store Submission | Pending |
+| STORE-04 | Phase 4 — Signing + Play Store Submission | Pending |
+| STORE-05 | Phase 4 — Signing + Play Store Submission | Pending |
+| STORE-06 | Phase 4 — Signing + Play Store Submission | Pending |
