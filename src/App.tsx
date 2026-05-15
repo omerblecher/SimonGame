@@ -322,9 +322,11 @@ export const App: React.FC = () => {
                   const isActive = activePad === pad.id;
                   const baseClasses =
                     'absolute w-1/2 h-1/2 border-[8px] border-zinc-950 transition-all duration-150 ease-out focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-slate-100/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black';
-                  const interactiveClasses = isDisabled
-                    ? 'cursor-not-allowed opacity-40'
-                    : 'cursor-pointer hover:brightness-110';
+                  const interactiveClasses = isDisabled && !isActive
+                    ? 'cursor-not-allowed'
+                    : !isDisabled
+                      ? 'cursor-pointer hover:brightness-110'
+                      : '';
                   const activeClasses = isActive
                     ? `${pad.glowClass} scale-[1.03] brightness-125`
                     : 'shadow-[0_0_22px_rgba(0,0,0,0.8)]';
@@ -333,7 +335,8 @@ export const App: React.FC = () => {
                     <button
                       key={pad.id}
                       type="button"
-                      disabled={isDisabled}
+                      disabled={isDisabled && !isActive}
+                      style={{ touchAction: 'manipulation' }}
                       onClick={() => handlePadClick(pad.id)}
                       aria-label={pad.label}
                       className={[
