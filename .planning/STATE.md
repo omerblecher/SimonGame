@@ -24,12 +24,12 @@ progress:
 ## Current Position
 
 **Milestone:** 1 — v1.0 Android Release
-**Phase:** 2 — Capacitor Android Baseline — Executing
-**Plan:** 02-01 complete; 02-02 pending
-**Status:** Phase 2 executing — 1/2 plans done
+**Phase:** 3 — AdMob Integration — Not started
+**Plan:** 02-02 complete; Phase 2 done
+**Status:** Phase 2 complete — ready for Phase 3
 
 ```
-Progress: [===>-] 37% — Phase 1 of 4 complete; Phase 2 executing (1/2 plans done)
+Progress: [=====>] 50% — Phases 1-2 of 4 complete; Phase 3 next
 ```
 
 ---
@@ -39,9 +39,9 @@ Progress: [===>-] 37% — Phase 1 of 4 complete; Phase 2 executing (1/2 plans do
 | Metric | Value |
 |--------|-------|
 | Phases total | 4 |
-| Phases complete | 1 |
+| Phases complete | 2 |
 | Requirements total | 24 |
-| Requirements complete | 9 |
+| Requirements complete | 11 |
 
 ---
 
@@ -61,11 +61,12 @@ Progress: [===>-] 37% — Phase 1 of 4 complete; Phase 2 executing (1/2 plans do
 | Emulator audio silence acceptable for Phase 2 | AVD audio unreliable; physical device audio check deferred to Phase 3 | Phase 2 Planning |
 | capacitor.config.ts created manually (no npx cap init) | Locks appId and appName deterministically without interactive prompts; TypeScript config consistent with TS-first project | Phase 2 Plan 01 |
 | Java 21 is installed but JAVA_HOME points to Java 8 | Java 21 at C:/Program Files/Eclipse Adoptium/jdk-21.0.7.6-hotspot must be used for Gradle builds; set JAVA_HOME before Plan 02 | Phase 2 Plan 01 |
+| Emulator audio silence accepted for Phase 2; physical device deferred | AVD audio unreliable (D-05); game interaction fully verified on AVD; audio check deferred to Phase 3 | Phase 2 Plan 02 |
 
 ### Active TODOs
 
-- BEFORE Plan 02: Update JAVA_HOME to Java 21 path: `C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot` (currently points to Java 8 — Gradle builds will fail)
-- Phase 2 Plan 02 Task 3 requires manual emulator verification (human checkpoint)
+- Phase 3: Verify audio on physical Android device during AdMob integration (emulator audio silent per D-05)
+- Phase 3: Register AdMob App ID for appId=com.otis.brooke.simon.game before starting Phase 3
 
 ### Known Blockers
 
@@ -87,8 +88,8 @@ None at start.
 ## Session Continuity
 
 **Last updated:** 2026-05-15
-**Last action:** Phase 2 Plan 01 complete — Capacitor 8.3.4 installed, android/ scaffolded, applicationId and app_name verified (c6ad457)
-**Next action:** Execute Phase 2 Plan 02 — AndroidManifest portrait lock, build pipeline, emulator run (update JAVA_HOME to Java 21 first)
+**Last action:** Phase 2 Plan 02 complete — portrait lock added, build pipeline verified, game confirmed playable on AVD (353f9f1)
+**Next action:** Begin Phase 3 — AdMob Integration (register AdMob App ID, install @capacitor-community/admob, implement GDPR consent flow)
 
 ---
 
@@ -97,6 +98,6 @@ None at start.
 | Phase | Status | Completed |
 |-------|--------|-----------|
 | 1. Web Fixes | Complete | 2026-05-15 |
-| 2. Capacitor Android Baseline | Executing (1/2 plans done) | - |
+| 2. Capacitor Android Baseline | Complete | 2026-05-15 |
 | 3. AdMob Integration | Not started | - |
 | 4. Signing + Play Store Submission | Not started | - |

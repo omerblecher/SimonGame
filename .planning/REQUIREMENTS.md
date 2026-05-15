@@ -21,8 +21,8 @@
 - [x] **CAP-02**: `@capacitor/core`, `@capacitor/cli`, `@capacitor/android` installed at the same major version.
 - [x] **CAP-03**: `capacitor.config.ts` configured with `appId` (e.g. `com.omerblecher.simongame`), `appName`, and `webDir: 'dist'`.
 - [x] **CAP-04**: Android project scaffolded via `npx cap add android`.
-- [ ] **CAP-05**: `npm run build && npx cap sync android` pipeline works end-to-end.
-- [ ] **CAP-06**: Game plays correctly on Android emulator or physical device (audio works, pads respond, no visual regressions).
+- [x] **CAP-05**: `npm run build && npx cap sync android` pipeline works end-to-end.
+- [x] **CAP-06**: Game plays correctly on Android emulator or physical device (audio works, pads respond, no visual regressions).
 
 ### Phase 3 — AdMob Integration
 
@@ -89,8 +89,8 @@
 | CAP-02 | Phase 2 — Capacitor Android Baseline | Pending |
 | CAP-03 | Phase 2 — Capacitor Android Baseline | Pending |
 | CAP-04 | Phase 2 — Capacitor Android Baseline | Pending |
-| CAP-05 | Phase 2 — Capacitor Android Baseline | Pending |
-| CAP-06 | Phase 2 — Capacitor Android Baseline | Pending |
+| CAP-05 | Phase 2 — Capacitor Android Baseline | Complete |
+| CAP-06 | Phase 2 — Capacitor Android Baseline | Complete |
 | ADM-01 | Phase 3 — AdMob Integration | Pending |
 | ADM-02 | Phase 3 — AdMob Integration | Pending |
 | ADM-03 | Phase 3 — AdMob Integration | Pending |
