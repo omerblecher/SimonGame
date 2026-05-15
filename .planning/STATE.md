@@ -8,8 +8,8 @@ progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 4
-  completed_plans: 2
-  percent: 25
+  completed_plans: 3
+  percent: 37
 ---
 
 # State — Simon Game Android Release
@@ -24,12 +24,12 @@ progress:
 ## Current Position
 
 **Milestone:** 1 — v1.0 Android Release
-**Phase:** 2 — Capacitor Android Baseline — Ready to execute
-**Plan:** 2 plans created (02-01, 02-02) — ready for execution
-**Status:** Phase 2 planned; ready to execute
+**Phase:** 2 — Capacitor Android Baseline — Executing
+**Plan:** 02-01 complete; 02-02 pending
+**Status:** Phase 2 executing — 1/2 plans done
 
 ```
-Progress: [==>--] 25% — Phase 1 of 4 complete; Phase 2 planned (0/2 plans done)
+Progress: [===>-] 37% — Phase 1 of 4 complete; Phase 2 executing (1/2 plans done)
 ```
 
 ---
@@ -41,7 +41,7 @@ Progress: [==>--] 25% — Phase 1 of 4 complete; Phase 2 planned (0/2 plans done
 | Phases total | 4 |
 | Phases complete | 1 |
 | Requirements total | 24 |
-| Requirements complete | 5 |
+| Requirements complete | 9 |
 
 ---
 
@@ -59,10 +59,12 @@ Progress: [==>--] 25% — Phase 1 of 4 complete; Phase 2 planned (0/2 plans done
 | Active pad excluded from disabled+opacity — gesture handlers own AudioContext lifecycle | Pad stays interactive during sequence so glow renders; resume() moved to handleStart/handlePadClick with await+try/catch | Phase 1 Plan 02 |
 | Capacitor 8 (not 6 or 7) | @capacitor-community/admob@8.0.0 (Dec 2025) requires @capacitor/core ^8.0.0 — wrong version would block Phase 3 AdMob | Phase 2 Planning |
 | Emulator audio silence acceptable for Phase 2 | AVD audio unreliable; physical device audio check deferred to Phase 3 | Phase 2 Planning |
+| capacitor.config.ts created manually (no npx cap init) | Locks appId and appName deterministically without interactive prompts; TypeScript config consistent with TS-first project | Phase 2 Plan 01 |
+| Java 21 is installed but JAVA_HOME points to Java 8 | Java 21 at C:/Program Files/Eclipse Adoptium/jdk-21.0.7.6-hotspot must be used for Gradle builds; set JAVA_HOME before Plan 02 | Phase 2 Plan 01 |
 
 ### Active TODOs
 
-- Before executing Phase 2 Plan 01: verify `java -version` is 17+ and `ANDROID_HOME` env var is set
+- BEFORE Plan 02: Update JAVA_HOME to Java 21 path: `C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot` (currently points to Java 8 — Gradle builds will fail)
 - Phase 2 Plan 02 Task 3 requires manual emulator verification (human checkpoint)
 
 ### Known Blockers
@@ -85,8 +87,8 @@ None at start.
 ## Session Continuity
 
 **Last updated:** 2026-05-15
-**Last action:** Phase 2 planned — 2 plans created covering CAP-01 through CAP-06; research confirmed Capacitor 8 required
-**Next action:** Execute Phase 2 — run `/gsd:execute-phase 2` (verify java 17+ and ANDROID_HOME before starting)
+**Last action:** Phase 2 Plan 01 complete — Capacitor 8.3.4 installed, android/ scaffolded, applicationId and app_name verified (c6ad457)
+**Next action:** Execute Phase 2 Plan 02 — AndroidManifest portrait lock, build pipeline, emulator run (update JAVA_HOME to Java 21 first)
 
 ---
 
@@ -95,6 +97,6 @@ None at start.
 | Phase | Status | Completed |
 |-------|--------|-----------|
 | 1. Web Fixes | Complete | 2026-05-15 |
-| 2. Capacitor Android Baseline | Planned (ready to execute) | - |
+| 2. Capacitor Android Baseline | Executing (1/2 plans done) | - |
 | 3. AdMob Integration | Not started | - |
 | 4. Signing + Play Store Submission | Not started | - |

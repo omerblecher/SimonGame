@@ -17,10 +17,10 @@
 
 ### Phase 2 — Capacitor Android Baseline
 
-- [ ] **CAP-01**: Capacitor version compatibility with `@capacitor-community/admob` verified before installation (`npm show @capacitor-community/admob peerDependencies`).
-- [ ] **CAP-02**: `@capacitor/core`, `@capacitor/cli`, `@capacitor/android` installed at the same major version.
-- [ ] **CAP-03**: `capacitor.config.ts` configured with `appId` (e.g. `com.omerblecher.simongame`), `appName`, and `webDir: 'dist'`.
-- [ ] **CAP-04**: Android project scaffolded via `npx cap add android`.
+- [x] **CAP-01**: Capacitor version compatibility with `@capacitor-community/admob` verified before installation (`npm show @capacitor-community/admob peerDependencies`).
+- [x] **CAP-02**: `@capacitor/core`, `@capacitor/cli`, `@capacitor/android` installed at the same major version.
+- [x] **CAP-03**: `capacitor.config.ts` configured with `appId` (e.g. `com.omerblecher.simongame`), `appName`, and `webDir: 'dist'`.
+- [x] **CAP-04**: Android project scaffolded via `npx cap add android`.
 - [ ] **CAP-05**: `npm run build && npx cap sync android` pipeline works end-to-end.
 - [ ] **CAP-06**: Game plays correctly on Android emulator or physical device (audio works, pads respond, no visual regressions).
 

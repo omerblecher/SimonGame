@@ -41,7 +41,7 @@ Plans:
 4. The build pipeline (`npm run build` → `npx cap sync android` → emulator run) completes without errors and is documented in a reproducible script or README section
 **Plans:** 2 plans
 Plans:
-- [ ] 02-01-PLAN.md — Environment check + Capacitor 8 install + capacitor.config.ts + Android scaffold (CAP-01, CAP-02, CAP-03, CAP-04)
+- [x] 02-01-PLAN.md — Environment check + Capacitor 8 install + capacitor.config.ts + Android scaffold (CAP-01, CAP-02, CAP-03, CAP-04)
 - [ ] 02-02-PLAN.md — Portrait lock + build pipeline + emulator run and verification (CAP-05, CAP-06)
 
 ### Phase 3: AdMob Integration
@@ -77,6 +77,6 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Web Fixes | 2/2 | Complete | 2026-05-15 |
-| 2. Capacitor Android Baseline | 0/2 | Planned | - |
+| 2. Capacitor Android Baseline | 1/2 | Executing | - |
 | 3. AdMob Integration | 0/? | Not started | - |
 | 4. Signing + Play Store Submission | 0/? | Not started | - |
