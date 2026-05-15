@@ -8,8 +8,8 @@ progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 7
-  completed_plans: 4
-  percent: 50
+  completed_plans: 5
+  percent: 57
 ---
 
 # State — Simon Game Android Release
@@ -24,12 +24,12 @@ progress:
 ## Current Position
 
 **Milestone:** 1 — v1.0 Android Release
-**Phase:** 3 — AdMob Integration — Planned, ready to execute
-**Plan:** 03 planning complete — 3 plans in 3 waves
-**Status:** Phase 3 planned — ready to execute
+**Phase:** 3 — AdMob Integration — Executing
+**Plan:** 03-02 (Wave 2) — next
+**Status:** Phase 3 executing — Wave 1 complete, Wave 2 ready
 
 ```
-Progress: [=====>] 50% — Phases 1-2 of 4 complete; Phase 3 planned
+Progress: [======>] 57% — 5 of 7 plans complete; Phase 3 executing (03-01 done)
 ```
 
 ---
@@ -62,6 +62,8 @@ Progress: [=====>] 50% — Phases 1-2 of 4 complete; Phase 3 planned
 | capacitor.config.ts created manually (no npx cap init) | Locks appId and appName deterministically without interactive prompts; TypeScript config consistent with TS-first project | Phase 2 Plan 01 |
 | Java 21 is installed but JAVA_HOME points to Java 8 | Java 21 at C:/Program Files/Eclipse Adoptium/jdk-21.0.7.6-hotspot must be used for Gradle builds; set JAVA_HOME before Plan 02 | Phase 2 Plan 01 |
 | Emulator audio silence accepted for Phase 2; physical device deferred | AVD audio unreliable (D-05); game interaction fully verified on AVD; audio check deferred to Phase 3 | Phase 2 Plan 02 |
+| @string/admob_app_id indirection in AndroidManifest | App ID in strings.xml referenced via @string/admob_app_id — keeps ID out of XML attributes for cleaner environment switching | Phase 3 Plan 01 |
+| Pre-render body background slate-900 (#0f172a) not slate-950 | 1-second pre-render delta imperceptible; inline style overridden by Tailwind at runtime | Phase 3 Plan 01 |
 
 ### Active TODOs
 
@@ -88,8 +90,8 @@ None at start.
 ## Session Continuity
 
 **Last updated:** 2026-05-15
-**Last action:** Phase 3 planned — 3 plans (03-01, 03-02, 03-03) created and verified; ready for execute-phase
-**Next action:** Execute Phase 3 — run /gsd:execute-phase 3 (register AdMob App ID first — see Plan 03-01 user_setup)
+**Last action:** Completed Plan 03-01 — AdMob packages installed, AndroidManifest wired, index.html body background set
+**Next action:** Execute Plan 03-02 — AdMob JS integration (useBannerHeight hook, main.tsx UMP consent + initialize, App.tsx banner show/hide)
 
 ---
 
@@ -99,5 +101,5 @@ None at start.
 |-------|--------|-----------|
 | 1. Web Fixes | Complete | 2026-05-15 |
 | 2. Capacitor Android Baseline | Complete | 2026-05-15 |
-| 3. AdMob Integration | Not started | - |
+| 3. AdMob Integration | Executing | - |
 | 4. Signing + Play Store Submission | Not started | - |

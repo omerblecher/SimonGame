@@ -56,7 +56,7 @@ Plans:
 4. The banner disappears when the app is backgrounded and reappears when the app returns to the foreground
 **Plans:** 3 plans
 Plans:
-- [ ] 03-01-PLAN.md — Install admob + @capacitor/app packages, add AdMob meta-data to AndroidManifest.xml + strings.xml, add body background to index.html (ADM-01, ADM-02)
+- [x] 03-01-PLAN.md — Install admob + @capacitor/app packages, add AdMob meta-data to AndroidManifest.xml + strings.xml, add body background to index.html (ADM-01, ADM-02)
 - [ ] 03-02-PLAN.md — Create useBannerHeight hook (bannerAdSizeChanged listener), rewrite main.tsx with IIFE consent+init sequence (ADM-03, ADM-04, ADM-07, ADM-08)
 - [ ] 03-03-PLAN.md — Wire banner into App.tsx (showBanner, appStateChange, spacer div), build + physical device verification (ADM-05, ADM-06, ADM-07, ADM-08)
 
@@ -89,5 +89,5 @@ Cross-cutting constraints:
 |-------|----------------|--------|-----------|
 | 1. Web Fixes | 2/2 | Complete | 2026-05-15 |
 | 2. Capacitor Android Baseline | 2/2 | Complete | 2026-05-15 |
-| 3. AdMob Integration | 0/3 | Planned | - |
+| 3. AdMob Integration | 1/3 | Executing | - |
 | 4. Signing + Play Store Submission | 0/? | Not started | - |

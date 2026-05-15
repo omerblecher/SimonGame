@@ -26,8 +26,8 @@
 
 ### Phase 3 — AdMob Integration
 
-- [ ] **ADM-01**: `@capacitor-community/admob` installed at version compatible with chosen Capacitor major.
-- [ ] **ADM-02**: AdMob App ID declared as `<meta-data>` in `AndroidManifest.xml`.
+- [x] **ADM-01**: `@capacitor-community/admob` installed at version compatible with chosen Capacitor major.
+- [x] **ADM-02**: AdMob App ID declared as `<meta-data>` in `AndroidManifest.xml`.
 - [ ] **ADM-03**: GDPR/UMP consent flow implemented before `AdMob.initialize()` is called.
 - [ ] **ADM-04**: `AdMob.initialize()` is awaited in `main.tsx` before React renders.
 - [ ] **ADM-05**: Banner ad displayed at bottom of screen using test ad unit ID during development.
@@ -91,8 +91,8 @@
 | CAP-04 | Phase 2 — Capacitor Android Baseline | Pending |
 | CAP-05 | Phase 2 — Capacitor Android Baseline | Complete |
 | CAP-06 | Phase 2 — Capacitor Android Baseline | Complete |
-| ADM-01 | Phase 3 — AdMob Integration | Pending |
-| ADM-02 | Phase 3 — AdMob Integration | Pending |
+| ADM-01 | Phase 3 — AdMob Integration | Complete |
+| ADM-02 | Phase 3 — AdMob Integration | Complete |
 | ADM-03 | Phase 3 — AdMob Integration | Pending |
 | ADM-04 | Phase 3 — AdMob Integration | Pending |
 | ADM-05 | Phase 3 — AdMob Integration | Pending |
