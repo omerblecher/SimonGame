@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Android Release
 status: executing
-last_updated: "2026-05-15"
+last_updated: "2026-05-15T16:05:34.292Z"
 progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 7
-  completed_plans: 5
-  percent: 57
+  completed_plans: 6
+  percent: 50
 ---
 
 # State — Simon Game Android Release
@@ -25,11 +25,11 @@ progress:
 
 **Milestone:** 1 — v1.0 Android Release
 **Phase:** 3 — AdMob Integration — Executing
-**Plan:** 03-02 (Wave 2) — next
-**Status:** Phase 3 executing — Wave 1 complete, Wave 2 ready
+**Plan:** 03-03 (Wave 3) — next
+**Status:** Phase 3 executing — Wave 2 complete, Wave 3 ready
 
 ```
-Progress: [======>] 57% — 5 of 7 plans complete; Phase 3 executing (03-01 done)
+Progress: [█████████░] 86%
 ```
 
 ---
@@ -64,6 +64,9 @@ Progress: [======>] 57% — 5 of 7 plans complete; Phase 3 executing (03-01 done
 | Emulator audio silence accepted for Phase 2; physical device deferred | AVD audio unreliable (D-05); game interaction fully verified on AVD; audio check deferred to Phase 3 | Phase 2 Plan 02 |
 | @string/admob_app_id indirection in AndroidManifest | App ID in strings.xml referenced via @string/admob_app_id — keeps ID out of XML attributes for cleaner environment switching | Phase 3 Plan 01 |
 | Pre-render body background slate-900 (#0f172a) not slate-950 | 1-second pre-render delta imperceptible; inline style overridden by Tailwind at runtime | Phase 3 Plan 01 |
+| IIFE over top-level await in main.tsx | IIFE safer with strict TypeScript mode; avoids TS1378 even if tsconfig target changes | Phase 3 Plan 02 |
+| BannerAdPluginEvents.SizeChanged (not bannerAdLoaded) for banner height | bannerAdLoaded is () => void with no payload; SizeChanged carries { width, height } | Phase 3 Plan 02 |
+| initializeForTesting: true Phase 3 only | Test mode in Phase 3; replaced with false in Phase 4 per planning key decision #9 | Phase 3 Plan 02 |
 
 ### Active TODOs
 
@@ -90,8 +93,8 @@ None at start.
 ## Session Continuity
 
 **Last updated:** 2026-05-15
-**Last action:** Completed Plan 03-01 — AdMob packages installed, AndroidManifest wired, index.html body background set
-**Next action:** Execute Plan 03-02 — AdMob JS integration (useBannerHeight hook, main.tsx UMP consent + initialize, App.tsx banner show/hide)
+**Last action:** Completed Plan 03-02 — useBannerHeight hook (BannerAdPluginEvents.SizeChanged) and main.tsx IIFE consent+init sequence
+**Next action:** Execute Plan 03-03 — App.tsx banner show/hide with showBanner(), useBannerHeight() spacer, and appStateChange listener
 
 ---
 
