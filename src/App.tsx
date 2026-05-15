@@ -84,9 +84,6 @@ export const App: React.FC = () => {
       audioCtxRef.current = ctx;
       masterGainRef.current = masterGain;
     }
-    if (audioCtxRef.current.state === 'suspended') {
-      void audioCtxRef.current.resume();
-    }
     return audioCtxRef.current;
   }, []);
 
@@ -203,6 +200,7 @@ export const App: React.FC = () => {
     setStreak(0);
     setStatus('Watch the pattern...');
 
+    try { await audioCtxRef.current?.resume(); } catch (_) {}
     await playSequence(startingSequence);
   }, [isPlayingSequence, playSequence, randomColor]);
 
@@ -210,6 +208,7 @@ export const App: React.FC = () => {
     async (color: ColorId) => {
       if (!isUserTurn || isPlayingSequence) return;
 
+      try { await audioCtxRef.current?.resume(); } catch (_) {}
       setActivePad(color);
       playColorTone(color, 220);
 
