@@ -6,12 +6,17 @@ import { Capacitor } from '@capacitor/core';
 import { AdMob } from '@capacitor-community/admob';
 
 async function initializeAdMob(): Promise<void> {
-  // UMP consent — auto-detects EEA/UK; non-EEA returns immediately
-  const consentInfo = await AdMob.requestConsentInfo();
-  if (!consentInfo.canRequestAds && consentInfo.isConsentFormAvailable === true) {
-    await AdMob.showConsentForm();
+  // UMP consent — may throw if no forms configured in AdMob console yet
+  try {
+    const consentInfo = await AdMob.requestConsentInfo();
+    if (!consentInfo.canRequestAds && consentInfo.isConsentFormAvailable === true) {
+      await AdMob.showConsentForm();
+    }
+  } catch (consentErr) {
+    const msg = consentErr instanceof Error ? consentErr.message : String(consentErr);
+    console.warn('UMP consent check failed, proceeding without consent:', msg);
   }
-  // Initialize after consent resolves
+  // Initialize regardless of consent outcome
   await AdMob.initialize({
     initializeForTesting: true, // Phase 3 only — set false in Phase 4
   });
