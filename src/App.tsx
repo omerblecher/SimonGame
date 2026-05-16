@@ -4,6 +4,7 @@ import { AdMob, BannerAdSize, BannerAdPosition } from '@capacitor-community/admo
 import type { BannerAdOptions } from '@capacitor-community/admob';
 import { App as CapacitorApp } from '@capacitor/app';
 import { useBannerHeight } from './hooks/useBannerHeight';
+import { ADMOB_BANNER_ID } from './config';
 
 type ColorId = 'green' | 'red' | 'yellow' | 'blue';
 
@@ -294,13 +295,12 @@ export const App: React.FC = () => {
     if (!Capacitor.isNativePlatform()) return;
     if (!(window as { __admobReady?: boolean }).__admobReady) return;
 
-    const TEST_BANNER_ID = 'ca-app-pub-3940256099942544/6300978111';
     const bannerOptions: BannerAdOptions = {
-      adId: TEST_BANNER_ID,
+      adId: ADMOB_BANNER_ID,
       adSize: BannerAdSize.BANNER,
       position: BannerAdPosition.BOTTOM_CENTER,
       margin: 0,
-      isTesting: true,
+      isTesting: false,
     };
 
     AdMob.showBanner(bannerOptions).catch(console.error);

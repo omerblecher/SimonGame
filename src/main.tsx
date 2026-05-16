@@ -18,7 +18,7 @@ async function initializeAdMob(): Promise<void> {
   }
   // Initialize regardless of consent outcome
   await AdMob.initialize({
-    initializeForTesting: true, // Phase 3 only — set false in Phase 4
+    initializeForTesting: false,
   });
 }
 
