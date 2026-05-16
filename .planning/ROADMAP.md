@@ -91,6 +91,18 @@ Plans:
 - [ ] 04-08-PLAN.md — Play Console store listing + data safety form + IARC rating + AAB upload to internal test track + Play App Signing enrollment (SIGN-05, STORE-02, STORE-03, STORE-04)
 - [ ] 04-09-PLAN.md — Submit to Production track (STORE-06)
 
+**Wave 1** — Parallel prerequisites (04-01, 04-02)
+**Wave 2** *(blocked on Wave 1 completion)* — Icon, privacy policy, signing config (04-03, 04-04, 04-05)
+**Wave 3** *(blocked on Wave 2 completion)* — GitHub Pages + GDPR form publish (04-07)
+**Wave 4** *(blocked on Wave 3 completion)* — Release AAB build (04-06 — requires GDPR form live per D-10)
+**Wave 5** *(blocked on Wave 4 completion)* — Play Console store listing + AAB upload (04-08)
+**Wave 6** *(blocked on Wave 5 completion)* — Production track submission (04-09)
+
+Cross-cutting constraints:
+- GDPR consent form must be published (Wave 3) BEFORE building the release AAB (Wave 4) — enforced via 04-06 depends_on 04-07 (D-10)
+- JAVA_HOME must be set to Java 21 (`C:/Program Files/Eclipse Adoptium/jdk-21.0.7.6-hotspot`) for all gradlew commands
+- `keystore.properties` and `*.jks` must never be committed (D-11, D-12)
+
 ---
 
 ## Progress
@@ -100,4 +112,4 @@ Plans:
 | 1. Web Fixes | 2/2 | Complete | 2026-05-15 |
 | 2. Capacitor Android Baseline | 2/2 | Complete | 2026-05-15 |
 | 3. AdMob Integration | 3/3 | Complete | 2026-05-15 |
-| 4. Signing + Play Store Submission | 0/8 | Not started | - |
+| 4. Signing + Play Store Submission | 0/9 | Ready to execute | - |
