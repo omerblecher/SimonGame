@@ -46,7 +46,7 @@
 - [ ] **SIGN-03**: `*.jks` added to `.gitignore`.
 - [ ] **SIGN-04**: Release AAB builds cleanly via `gradlew bundleRelease`.
 - [ ] **SIGN-05**: Enrolled in Google Play App Signing during first Play Console submission.
-- [ ] **STORE-01**: Privacy policy hosted at a public HTTPS URL (covers AdMob data collection).
+- [x] **STORE-01**: Privacy policy hosted at a public HTTPS URL (covers AdMob data collection).
 - [ ] **STORE-02**: Data Safety form in Play Console completed (declare AdMob device identifier collection).
 - [ ] **STORE-03**: IARC content rating questionnaire completed (declare ads — expected rating: Everyone/3+).
 - [ ] **STORE-04**: Store listing complete (short description, long description, 2+ screenshots, 1024×500 feature graphic).
@@ -108,7 +108,7 @@
 | SIGN-03 | Phase 4 — Signing + Play Store Submission | Pending |
 | SIGN-04 | Phase 4 — Signing + Play Store Submission | Pending |
 | SIGN-05 | Phase 4 — Signing + Play Store Submission | Pending |
-| STORE-01 | Phase 4 — Signing + Play Store Submission | Pending |
+| STORE-01 | Phase 4 — Signing + Play Store Submission | Complete |
 | STORE-02 | Phase 4 — Signing + Play Store Submission | Pending |
 | STORE-03 | Phase 4 — Signing + Play Store Submission | Pending |
 | STORE-04 | Phase 4 — Signing + Play Store Submission | Pending |
