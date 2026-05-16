@@ -10,6 +10,14 @@ MIPMAP_SIZES = {
     'mipmap-xxhdpi': 144,
     'mipmap-xxxhdpi': 192,
 }
+# Adaptive icon foreground must be 108dp at each density (not 48dp)
+FOREGROUND_SIZES = {
+    'mipmap-mdpi': 108,
+    'mipmap-hdpi': 162,
+    'mipmap-xhdpi': 216,
+    'mipmap-xxhdpi': 324,
+    'mipmap-xxxhdpi': 432,
+}
 RES_DIR = 'android/app/src/main/res'
 ASSETS_DIR = 'assets/icons'
 
@@ -23,6 +31,22 @@ def make_simon_icon(size):
     draw.rectangle([half + gap, gap, size - gap, half - gap], fill=COLORS['TR'])
     draw.rectangle([gap, half + gap, half - gap, size - gap], fill=COLORS['BL'])
     draw.rectangle([half + gap, half + gap, size - gap, size - gap], fill=COLORS['BR'])
+    return img
+
+
+def make_foreground(size):
+    """Transparent background, quadrants only — for adaptive icon foreground layer."""
+    img = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    # Keep quadrants within the safe zone (center 72dp of 108dp canvas)
+    safe = round(size * 72 / 108)
+    offset = (size - safe) // 2
+    gap = max(2, safe // 48)
+    half = size // 2
+    draw.rectangle([offset + gap, offset + gap, half - gap, half - gap], fill=COLORS['TL'])
+    draw.rectangle([half + gap, offset + gap, size - offset - gap, half - gap], fill=COLORS['TR'])
+    draw.rectangle([offset + gap, half + gap, half - gap, size - offset - gap], fill=COLORS['BL'])
+    draw.rectangle([half + gap, half + gap, size - offset - gap, size - offset - gap], fill=COLORS['BR'])
     return img
 
 
@@ -53,5 +77,10 @@ for mipmap_dir, size in MIPMAP_SIZES.items():
     os.makedirs(out_dir, exist_ok=True)
     make_simon_icon(size).convert('RGB').save(f'{out_dir}/ic_launcher.png')
     make_round_icon(size).save(f'{out_dir}/ic_launcher_round.png')
+
+for mipmap_dir, size in FOREGROUND_SIZES.items():
+    out_dir = f'{RES_DIR}/{mipmap_dir}'
+    os.makedirs(out_dir, exist_ok=True)
+    make_foreground(size).save(f'{out_dir}/ic_launcher_foreground.png')
 
 print('Icon generation complete.')
