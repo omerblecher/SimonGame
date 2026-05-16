@@ -79,7 +79,7 @@ Cross-cutting constraints:
 3. The store listing is complete with short description, long description, at least 2 screenshots, and a 1024x500 feature graphic
 4. A privacy policy is hosted at a public HTTPS URL and linked in the Play Console listing
 5. The app is submitted to Google Play and status shows "Under review" or better
-**Plans:** 8 plans
+**Plans:** 9 plans
 Plans:
 - [ ] 04-01-PLAN.md — .gitignore hardening (*.jks, keystore.properties, .env.production) + release keystore generation + backup (META-01, META-02, META-03, SIGN-01, SIGN-03)
 - [ ] 04-02-PLAN.md — Verify Google Play Developer account + retrieve production AdMob banner unit ID + create GDPR consent form draft (SIGN-05, STORE-02, STORE-03, STORE-05, STORE-06)
@@ -88,7 +88,8 @@ Plans:
 - [ ] 04-05-PLAN.md — Gradle signing config + Vite env banner ID switching + src/config.ts + App.tsx + main.tsx production flags (SIGN-02, SIGN-03, SIGN-04, STORE-05)
 - [ ] 04-06-PLAN.md — Full release build pipeline (npm build + cap sync + gradlew bundleRelease) + AAB verification + screenshots (SIGN-04, META-04)
 - [ ] 04-07-PLAN.md — GitHub Pages enable + privacy policy URL verification + AdMob GDPR consent form publish (STORE-01)
-- [ ] 04-08-PLAN.md — Play Console store listing + data safety form + IARC rating + AAB upload + Play App Signing enrollment + production submission (SIGN-05, STORE-02, STORE-03, STORE-04, STORE-06)
+- [ ] 04-08-PLAN.md — Play Console store listing + data safety form + IARC rating + AAB upload to internal test track + Play App Signing enrollment (SIGN-05, STORE-02, STORE-03, STORE-04)
+- [ ] 04-09-PLAN.md — Submit to Production track (STORE-06)
 
 ---
 

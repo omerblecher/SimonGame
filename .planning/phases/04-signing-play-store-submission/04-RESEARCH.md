@@ -687,22 +687,25 @@ print('Icon generation complete.')
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Production banner unit ID timing**
    - What we know: D-07 says the ID will be provided at plan execution time
    - What's unclear: Whether the unit ID already exists in AdMob console or needs to be created during Phase 4
    - Recommendation: Plan task "Create banner ad unit in AdMob console" as the first AdMob step, before any build tasks
+   - **RESOLVED:** Plan 04-02 Task 2 handles both paths -- if a banner ad unit already exists in AdMob console it is used; if not, Task 2 walks through creating one. The production ID is recorded in 04-02-SUMMARY.md for use in Plan 04-05.
 
 2. **Google Play Developer account status**
    - What we know: The $25 registration fee is required; omerblecher@gmail.com is the developer email
    - What's unclear: Whether the account is already active or needs to be created
    - Recommendation: Plan task "Verify/create Google Play Developer account" in Wave 0 (prerequisite check)
+   - **RESOLVED:** Plan 04-02 Task 1 covers both active and new account paths -- it verifies account status and provides registration steps if the account is not yet active. The plan cannot proceed past Task 1 until the account is confirmed active.
 
 3. **App signing key choice in Play Console**
    - What we know: Play App Signing is automatic for new AAB submissions; Google offers to generate the app signing key
-   - What's unclear: User preference — let Google generate key (recommended) or provide existing key
+   - What's unclear: User preference -- let Google generate key (recommended) or provide existing key
    - Recommendation: Default to "let Google generate" (the simpler, more secure option); mention the alternative in plan notes
+   - **RESOLVED:** Default to "let Google generate" per Play App Signing documentation. Plan 04-08 Task 3 documents this choice and explains the upload key vs. app signing key distinction. No user action required beyond accepting the Play App Signing terms during first AAB upload.
 
 ---
 
