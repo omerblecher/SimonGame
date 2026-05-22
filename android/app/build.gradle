@@ -13,8 +13,8 @@ android {
         applicationId "com.otis.brooke.simon.game"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -47,6 +47,7 @@ repositories {
     flatDir{
         dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
     }
+    maven { url 'https://android-sdk.is.com/' } // ironSource SDK
 }
 
 dependencies {
@@ -59,6 +60,9 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
+    implementation 'com.google.android.gms:play-services-ads:23.0.0'
+    implementation 'com.google.ads.mediation:inmobi:10.6.7.0'
+    implementation 'com.google.ads.mediation:ironsource:8.0.0.0'
 }
 
 apply from: 'capacitor.build.gradle'
